@@ -1,20 +1,60 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+        <title>Tervetuloa! Bienvenue! Wilkommen!</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!-- TERMINAL -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+
+        <!-- BOOTSTRAP -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> 
+        
+        <!-- CUSTOMIZATIONS -->
+        <link rel="stylesheet" href="styles.css" />
+        <script src="scripts.js"></script>
+
     </head>
     <body>
+        <template id="greetings">
+            _______  _______  ______    __   __  ___   __    _  _______  ___     
+           |       ||       ||    _ |  |  |_|  ||   | |  |  | ||   _   ||   |    
+           |_     _||    ___||   | ||  |       ||   | |   |_| ||  |_|  ||   |    
+             |   |  |   |___ |   |_||_ |       ||   | |       ||       ||   |    
+             |   |  |    ___||    __  ||       ||   | |  _    ||       ||   |___ 
+             |   |  |   |___ |   |  | || ||_|| ||   | | | |   ||   _   ||       |
+             |___|  |_______||___|  |_||_|   |_||___| |_|  |__||__| |__||_______|
+        </template>
         <script>
-            $('body').terminal({
+            $('body').terminal(
+            {
                 hello: function(what) {
                     this.echo('Hello, ' + what +
                               '. Welcome to this terminal.');
+                },
+                help: function() {
+                    this.echo(printHelp());
+                },
+                gui: function() {
+                    this.echo(toggleGui());
                 }
-            }, {
-                greetings: 'My First Web Terminal'
+            }, 
+            {
+                greetings: greetings.innerHTML
             });
         </script>
+        <div id="gui" class="container-fluid">
+            <div class="row header-row">
+                <div class="col-12"><button class="button close-button" onclick="toggleGui()">X</button></p></div>
+            </div>
+            <div class="row">
+                <div class="column"><p>Content</p></div>
+            </div>
+        </div>
     </body>
 </html>

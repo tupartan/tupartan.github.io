@@ -1,0 +1,38 @@
+:root {
+    --gui-background-color: #fff;
+    --gui-header-color: #F0F0F4;
+    --gui-close-button-background: #EC695E;
+    --gui-close-button-text: #6C120B;
+}
+
+/* Elements in GUI */
+#gui {
+    display: none;
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+    width: 95vw;
+    height: 95vh;
+    border: 3px solid var(--gui-background-color);
+    border-radius: 15px;
+    background-color: var(--gui-background-color);
+}
+
+.header-row {
+    background-color: var(--gui-header-color);
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.close-button {
+    background-color: var(--gui-close-button-background);
+    border: none;
+    border-radius: 50%;
+    color: var(--gui-close-button-background);
+    text-align: center;
+    text-decoration: none;
+    font-size: 8px;
+}
+.close-button:hover {
+    color: var(--gui-close-button-text);
+}
