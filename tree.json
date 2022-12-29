@@ -1,0 +1,25 @@
+{
+    "." : {
+        "type" : "directory",
+        "children" : [
+            {
+                "index.html" : {
+                    "type" : "file"
+                },
+                "views" : {
+                    "type" : "directory",
+                    "children" : [
+                        {
+                            "biography.html" : {
+                                "type" : "file"
+                            },
+                            "cv.html" : {
+                                "type" : "file"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
