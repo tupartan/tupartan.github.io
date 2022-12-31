@@ -3,6 +3,16 @@
         "type" : "directory",
         "children" : [
             {
+                "ascii" : {
+                    "type" : "directory",
+                    "children" : [
+                        {
+                            "fightbugs.ascii" : {
+                                "type" : "file"
+                            }
+                        }
+                    ] 
+                },
                 "index.html" : {
                     "type" : "file"
                 },
