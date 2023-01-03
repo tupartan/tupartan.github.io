@@ -8,7 +8,12 @@
                     "children" : [
                         {
                             "fightbugs.ascii" : {
-                                "type" : "file"
+                                "type" : "file",
+                                "minWidth" : 232
+                            },
+                            "terminal.ascii" : {
+                                "type" : "file",
+                                "minWidth" : 232
                             }
                         }
                     ] 
